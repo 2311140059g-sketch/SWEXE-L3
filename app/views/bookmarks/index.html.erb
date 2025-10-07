@@ -1,0 +1,40 @@
+<h1>ブックマーク一覧</h1>
+
+<ul>
+<% @bookmarks.each do |book| %>
+  <li>
+    <%= book.title %> - <%= book.url %>
+  </li>
+<% end %>
+</ul>
+
+<hr>
+
+<h2>新しいブックマークを追加</h2>
+
+<% if @book.errors.any? %>
+  <div class="error-messages">
+    <h3>⚠️ 入力エラーがあります（<%= @book.errors.count %>件）:</h3>
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @book, local: true) do |f| %>
+  <div>
+    <%= f.label :title, "タイトル" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author, "著者" %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :published_date, "出版日" %><br>
+    <%= f.date_field :published_date %>
+  </div>
+  <%= f.submit "登録する" %>
+<% end %>
