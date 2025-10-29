@@ -1,0 +1,574 @@
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: 86015296015e482c94e2103edf52b921.vfs.cloud9.us-east-1.amazonaws.com
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:10:21 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='My'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-3.2.2/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-3.2.2/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 52ms (Views: 9.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:10:25 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rvm/gems/ruby-3.2.2/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rvm/gems/ruby-3.2.2/gems/railties-8.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='My'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-18 05:15:51.243206', '2025-09-18 05:15:51.243211') RETURNING "key" /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Migrating to CreateBookmarks (20250918051413)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='My'*/[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250918051413') RETURNING "version" /*application='My'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='My'*/[0m
+  [1m[36mBookmark Create (1.2ms)[0m  [1m[32mINSERT INTO "bookmarks" ("title", "url", "created_at", "updated_at") VALUES ('犬', 'http://a1', '2025-09-18 05:21:01.385627', '2025-09-18 05:21:01.385627') RETURNING "id" /*application='My'*/[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='My'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Migrating to AddDateToBookmarks (20250918052335)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='My'*/[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "bookmarks" ADD "date" varchar /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250918052335') RETURNING "version" /*application='My'*/[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='My'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='My'*/[0m
+  [1m[36mBookmark Create (2.2ms)[0m  [1m[32mINSERT INTO "bookmarks" ("title", "url", "created_at", "updated_at", "date") VALUES ('犬', 'http://a1', '2025-09-18 05:24:22.812049', '2025-09-18 05:24:22.812049', '1月1日') RETURNING "id" /*application='My'*/[0m
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='My'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='My'*/[0m
+  [1m[36mBookmark Create (1.7ms)[0m  [1m[32mINSERT INTO "bookmarks" ("title", "url", "created_at", "updated_at", "date") VALUES ('猫', 'http://a2', '2025-09-18 05:26:53.726744', '2025-09-18 05:26:53.726744', '1月2日') RETURNING "id" /*application='My'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='My'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='My'*/[0m
+  [1m[36mBookmark Create (0.8ms)[0m  [1m[32mINSERT INTO "bookmarks" ("title", "url", "created_at", "updated_at", "date") VALUES ('牛', 'http://a3', '2025-09-18 05:27:25.548383', '2025-09-18 05:27:25.548383', '1月3日') RETURNING "id" /*application='My'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='My'*/[0m
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /* loading for pp */ LIMIT 11 /*application='My'*/[0m
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:28:55 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | GC: 1.0ms)
+Completed 200 OK in 133ms (Views: 30.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 16.6ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.7ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/application-bfcdf840.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Started GET "/assets/turbo.min-3a2e143f.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/stimulus.min-4b1e420e.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/controllers/application-3affb389.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/controllers/index-ee64e1f1.js" for 157.13.46.105 at 2025-09-18 05:28:59 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:31:21 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (2.7ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 17.2ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | GC: 2.3ms)
+Completed 200 OK in 90ms (Views: 31.6ms | ActiveRecord: 4.1ms (1 query, 0 cached) | GC: 17.8ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:31:44 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 8.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:34:03 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (2.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 18.0ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | GC: 2.4ms)
+Completed 200 OK in 90ms (Views: 32.5ms | ActiveRecord: 4.4ms (1 query, 0 cached) | GC: 17.6ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:34:33 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (2.8ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 22.1ms | GC: 5.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | GC: 44.7ms)
+Completed 200 OK in 116ms (Views: 75.6ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 46.6ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:34:52 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (1.1ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 18.0ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | GC: 2.2ms)
+Completed 200 OK in 89ms (Views: 34.1ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 17.4ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:40:22 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (2.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 22.5ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | GC: 2.3ms)
+Completed 200 OK in 146ms (Views: 44.3ms | ActiveRecord: 5.1ms (1 query, 0 cached) | GC: 18.5ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:40:48 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | GC: 1.4ms)
+Completed 200 OK in 52ms (Views: 41.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:42:27 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (4.8ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 27.9ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | GC: 2.4ms)
+Completed 200 OK in 149ms (Views: 48.3ms | ActiveRecord: 12.2ms (1 query, 0 cached) | GC: 18.5ms)
+
+
+Started GET "/" for 157.13.46.105 at 2025-09-18 05:42:29 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (1.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:1
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 0.4ms)
+Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:15:24 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+  
+Zeitwerk::NameError (expected file /home/ubuntu/environment/01/my/app/controllers/bookmarks_controller.rb to define constant BookmarksController, but didn't):
+  
+zeitwerk (2.7.3) lib/zeitwerk/loader/callbacks.rb:31:in `on_file_autoloaded'
+zeitwerk (2.7.3) lib/zeitwerk/core_ext/kernel.rb:27:in `require'
+activesupport (8.0.2.1) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (8.0.2.1) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.2.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.2.1) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.2.1) lib/action_dispatch/request/utils.rb:108:in `action_encoding_template'
+actionpack (8.0.2.1) lib/action_dispatch/request/utils.rb:102:in `encode'
+actionpack (8.0.2.1) lib/action_dispatch/request/utils.rb:47:in `set_binary_encoding'
+actionpack (8.0.2.1) lib/action_dispatch/http/parameters.rb:70:in `path_parameters='
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2.1) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2.1) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.2.1) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.2.1) lib/rack/etag.rb:29:in `call'
+rack (3.2.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.1) lib/rack/head.rb:15:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/http/content_security_policy.rb:38:in `call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/cookies.rb:706:in `call'
+activerecord (8.0.2.1) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.1) lib/rack/method_override.rb:28:in `call'
+rack (3.2.1) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.2.1) lib/rails/engine.rb:535:in `call'
+puma (7.0.3) lib/puma/configuration.rb:299:in `call'
+puma (7.0.3) lib/puma/request.rb:101:in `block in handle_request'
+puma (7.0.3) lib/puma/thread_pool.rb:346:in `with_force_shutdown'
+puma (7.0.3) lib/puma/request.rb:100:in `handle_request'
+puma (7.0.3) lib/puma/server.rb:497:in `process_client'
+puma (7.0.3) lib/puma/server.rb:266:in `block in run'
+puma (7.0.3) lib/puma/thread_pool.rb:173:in `block in spawn_thread'
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:18:33 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 16.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @bookmarks.each do |book| %>
+  <%= book.title %>
+  <%= book.url %>
+  <% if @book.errors.any? %>
+  <div class="error-messages">
+    <h3>⚠️ 入力エラーがあります（<%= @book.errors.count %>件）:</h3>
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @book, local: true) do |f| %>
+  <div>
+    <%= f.label :title, "タイトル" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author, "著者" %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :published_date, "出版日" %><br>
+    <%= f.date_field :published_date %>
+  </div>
+  <%= f.submit %>
+<% end %>
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/01/my/app/views/bookmarks/index.html.erb:31: syntax error, unexpected end-of-input
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @bookmarks.each do |book| %>
+  <%= book.title %>
+  <%= book.url %>
+  <% if @book.errors.any? %>
+  <div class="error-messages">
+    <h3>⚠️ 入力エラーがあります（<%= @book.errors.count %>件）:</h3>
+    <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @book, local: true) do |f| %>
+  <div>
+    <%= f.label :title, "タイトル" %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :author, "著者" %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div>
+    <%= f.label :published_date, "出版日" %><br>
+    <%= f.date_field :published_date %>
+  </div>
+  <%= f.submit %>
+<% end %>
+):
+1:    <% @bookmarks.each do |book| %>
+2:      <%= book.title %>
+3:      <%= book.url %>
+4:      <% if @book.errors.any? %>
+5:      <div class="error-messages">
+6:        <h3>⚠️ 入力エラーがあります（<%= @book.errors.count %>件）:</h3>
+7:        <ul>
+8:          <% @book.errors.full_messages.each do |msg| %>
+9:            <li><%= msg %></li>
+10:          <% end %>
+11:        </ul>
+12:      </div>
+13:    <% end %>
+14:    
+15:    <%= form_with(model: @book, local: true) do |f| %>
+16:      <div>
+17:        <%= f.label :title, "タイトル" %><br>
+18:        <%= f.text_field :title %>
+19:      </div>
+20:      <div>
+21:        <%= f.label :author, "著者" %><br>
+22:        <%= f.text_field :author %>
+23:      </div>
+24:      <div>
+25:        <%= f.label :published_date, "出版日" %><br>
+26:        <%= f.date_field :published_date %>
+27:      </div>
+28:      <%= f.submit %>
+29:    <% end %>
+  
+app/views/bookmarks/index.html.erb:31: syntax error, unexpected end-of-input
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/01/my/app/views/bookmarks/index.html.erb:31: syntax error, unexpected end-of-input
+          end
+             ^
+):
+  
+app/views/bookmarks/index.html.erb:31: syntax error, unexpected end-of-input
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:19:36 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (3.0ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 18.8ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | GC: 0.8ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 16.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass)
+Caused by: NoMethodError (undefined method `errors' for nil:NilClass)
+
+Information for: ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    12: 
+    13: <h2>新しいブックマークを追加</h2>
+    14: 
+    15: <% if @book.errors.any? %>
+    16:   <div class="error-messages">
+    17:     <h3>⚠️ 入力エラーがあります（<%= @book.errors.count %>件）:</h3>
+    18:     <ul>
+  
+app/views/bookmarks/index.html.erb:15
+
+Information for cause: NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/views/bookmarks/index.html.erb:15
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:20:43 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 12.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | GC: 0.4ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 7.6ms (1 query, 0 cached) | GC: 19.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `bookmarks_path' for #<ActionView::Base:0x0000000000bec8>)
+Caused by: NoMethodError (undefined method `bookmarks_path' for #<ActionView::Base:0x0000000000bec8>)
+
+Information for: ActionView::Template::Error (undefined method `bookmarks_path' for #<ActionView::Base:0x0000000000bec8>):
+    23:   </div>
+    24: <% end %>
+    25: 
+    26: <%= form_with(model: @book, local: true) do |f| %>
+    27:   <div>
+    28:     <%= f.label :title, "タイトル" %><br>
+    29:     <%= f.text_field :title %>
+  
+app/views/bookmarks/index.html.erb:26
+
+Information for cause: NoMethodError (undefined method `bookmarks_path' for #<ActionView::Base:0x0000000000bec8>):
+  
+app/views/bookmarks/index.html.erb:26
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:22:30 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.7ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 30.2ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | GC: 2.0ms)
+Completed 200 OK in 128ms (Views: 49.7ms | ActiveRecord: 5.7ms (1 query, 0 cached) | GC: 18.1ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:23:37 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (1.3ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 17.8ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | GC: 1.2ms)
+Completed 200 OK in 130ms (Views: 35.5ms | ActiveRecord: 4.5ms (1 query, 0 cached) | GC: 45.8ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:24:14 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 15.0ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | GC: 1.2ms)
+Completed 200 OK in 125ms (Views: 27.8ms | ActiveRecord: 4.1ms (1 query, 0 cached) | GC: 46.9ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:25:30 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (8.6ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 28.4ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | GC: 1.2ms)
+Completed 200 OK in 142ms (Views: 35.9ms | ActiveRecord: 12.2ms (1 query, 0 cached) | GC: 47.6ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:27:08 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.9ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 20.4ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | GC: 1.6ms)
+Completed 200 OK in 102ms (Views: 35.1ms | ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 18.2ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:29:28 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 13.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | GC: 1.1ms)
+Completed 200 OK in 123ms (Views: 28.2ms | ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 45.6ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:30:59 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (2.7ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 22.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | GC: 1.3ms)
+Completed 200 OK in 147ms (Views: 42.0ms | ActiveRecord: 9.2ms (1 query, 0 cached) | GC: 18.8ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:32:23 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 18.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | GC: 1.1ms)
+Completed 200 OK in 162ms (Views: 38.9ms | ActiveRecord: 5.2ms (1 query, 0 cached) | GC: 46.2ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:33:16 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='My'*/[0m
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 20.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | GC: 1.1ms)
+Completed 200 OK in 146ms (Views: 46.4ms | ActiveRecord: 6.7ms (1 query, 0 cached) | GC: 45.1ms)
+
+
+Started GET "/" for 126.145.203.5 at 2025-09-23 09:34:08 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (0.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks" /*action='index',application='My',controller='bookmarks'*/[0m
+  ↳ app/views/bookmarks/index.html.erb:4
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 22.9ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | GC: 1.1ms)
+Completed 200 OK in 36ms (Views: 25.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/assets/application-082d4282.css" for 126.145.203.5 at 2025-09-23 09:34:08 +0000
+Cannot render console from 126.145.203.5! Allowed networks: 127.0.0.0/127.255.255.255, ::1
